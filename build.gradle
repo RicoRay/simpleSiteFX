@@ -1,0 +1,69 @@
+/**
+ ******************  Script Configuration ******************
+ */
+buildscript {
+  repositories {
+    jcenter()
+ 
+    maven {       
+      url "http://sandec.bintray.com/repo"
+    }
+  }
+
+  dependencies {
+    classpath 'com.sandec.jpro:jpro-plugin-gradle:2018.1.3'    
+  }
+}
+
+repositories {
+  jcenter()
+  
+    maven {
+      url "https://dl.bintray.com/dukke/maven"      
+    }
+}
+
+/**
+ ******************  Java Configuration ******************
+ */
+apply plugin: 'java'
+apply plugin: 'application'
+
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+compileJava {
+  sourceCompatibility = 1.8
+  targetCompatibility = 1.8
+}
+
+dependencies {
+    compile 'com.jfoenix:jfoenix:8.0.3'
+    compile 'com.pixelduke:FXParallax:2.0.0'
+}
+
+/**
+ ******************  jpro Configuration ******************
+ */
+apply plugin: 'com.sandec.jpro'
+
+
+/**
+ * App Main Class
+ */
+mainClassName = 'org.SimpleSiteFX'
+
+/**
+ * jpro settings
+ */
+jpro {
+  // for debugging
+  // JVMArgs << '-agentlib:jdwp=transport=dt_socket,server=n,address=5006,suspend=y'
+
+  //jpro server port
+  port = 8080
+
+  //jpro version (optional)
+  jproVersion = "2018.1.3"
+
+  openingPath = ""
+}

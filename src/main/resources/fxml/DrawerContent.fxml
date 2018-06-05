@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="170.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.FXMLDrawerContentController">
+   <children>
+      <ImageView fitHeight="122.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/images/SOLEX.JPG" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="bouton1" accessibleText="Bouton1" buttonType="RAISED" onAction="#bouton1OnAction" prefHeight="75.0" prefWidth="170.0" stylesheets="@/css/myCSS.css" text="Bouton 1" />
+      <JFXButton accessibleText="Bouton2" buttonType="RAISED" prefHeight="75.0" prefWidth="170.0" stylesheets="@/css/myCSS.css" text="Bouton 2" />
+      <JFXButton accessibleText="bouton3" buttonType="RAISED" prefHeight="75.0" prefWidth="170.0" stylesheets="@/css/myCSS.css" text="Bouton 3" />
+      <JFXButton accessibleText="bouton4" buttonType="RAISED" prefHeight="75.0" prefWidth="170.0" stylesheets="@/css/myCSS.css" text="Bouton 4" />
+      <JFXButton accessibleText="bouton5" buttonType="RAISED" prefHeight="75.0" prefWidth="170.0" stylesheets="@/css/myCSS.css" text="Bouton 5" />
+   </children>
+</VBox>
